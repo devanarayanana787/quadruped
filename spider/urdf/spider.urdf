@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="spider">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00232782250844819 0.00484999962416345 0.00237706350870009"
+        rpy="0 0 0" />
+      <mass
+        value="0.0656164141863128" />
+      <inertia
+        ixx="4.24810438500181E-05"
+        ixy="-5.90395548297961E-14"
+        ixz="-3.77227541671978E-22"
+        iyy="2.15170631644458E-05"
+        iyz="1.97807239609356E-09"
+        izz="5.99039456073992E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="f1">
+    <inertial>
+      <origin
+        xyz="-0.0246133393231356 -0.00282434722486308 0.00353398897050531"
+        rpy="0 0 0" />
+      <mass
+        value="0.011831113051677" />
+      <inertia
+        ixx="1.49447992938143E-06"
+        ixy="5.21588505424863E-08"
+        ixz="-6.80646972144656E-09"
+        iyy="1.52715873576735E-06"
+        iyz="-3.46004410127938E-08"
+        izz="1.03946591481982E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033172 0.040513 0.0037238"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="f11">
+    <inertial>
+      <origin
+        xyz="-0.0240452744682379 -0.0029596957982225 0.0109553755380435"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605986" />
+      <inertia
+        ixx="1.94820373448345E-06"
+        ixy="1.36488574669775E-09"
+        ixz="6.31796677429088E-07"
+        iyy="1.8515397312667E-06"
+        iyz="-6.21861727607104E-10"
+        izz="3.04703936359769E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f11_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0275 -0.0016 0.0084"
+      rpy="0 0 0" />
+    <parent
+      link="f1" />
+    <child
+      link="f11" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="f111">
+    <inertial>
+      <origin
+        xyz="-0.00845121500187329 0.016797144998031 -0.0100072503160727"
+        rpy="0 0 0" />
+      <mass
+        value="0.013123891605465" />
+      <inertia
+        ixx="3.24375574553877E-06"
+        ixy="1.19131158820671E-08"
+        ixz="-1.72857464785536E-06"
+        iyy="4.23404129801267E-06"
+        iyz="6.19596564589854E-08"
+        izz="1.95892274821536E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f111.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f111.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f111_joint"
+    type="revolute">
+    <origin
+      xyz="-0.05005 -0.0194 0.022803"
+      rpy="0 0 0" />
+    <parent
+      link="f11" />
+    <child
+      link="f111" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="f2">
+    <inertial>
+      <origin
+        xyz="0.0246177214175433 0.00185109539523642 -0.015044994033357"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118214531865819" />
+      <inertia
+        ixx="1.49297422129761E-06"
+        ixy="-5.22295366915831E-08"
+        ixz="6.83752432391061E-09"
+        iyy="1.52680921657239E-06"
+        iyz="-3.51069506250805E-08"
+        izz="1.03828147386784E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f2_joint"
+    type="revolute">
+    <origin
+      xyz="0.037828 0.040513 0.022299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="f22">
+    <inertial>
+      <origin
+        xyz="0.0233452429516554 0.0170403042017775 0.0123772011765128"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="2.02777007300971E-06"
+        ixy="-1.32514974615631E-09"
+        ixz="-6.93012674512365E-07"
+        iyy="1.85153973126671E-06"
+        iyz="-7.02569042915671E-10"
+        izz="2.96747302507143E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f22_joint"
+    type="revolute">
+    <origin
+      xyz="0.0275 -0.0147 -0.010175"
+      rpy="0 0 0" />
+    <parent
+      link="f2" />
+    <child
+      link="f22" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="f222">
+    <inertial>
+      <origin
+        xyz="0.00862678164913092 0.0173971449980311 -0.00985630417828349"
+        rpy="0 0 0" />
+      <mass
+        value="0.013123891605465" />
+      <inertia
+        ixx="3.18225551897369E-06"
+        ixy="-1.30065051142372E-08"
+        ixz="1.75020157088917E-06"
+        iyy="4.2340412980127E-06"
+        iyz="6.1739353405774E-08"
+        izz="2.02042297478046E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f222.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f222.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f222_joint"
+    type="revolute">
+    <origin
+      xyz="0.048593 0 0.025763"
+      rpy="0 0 0" />
+    <parent
+      link="f22" />
+    <child
+      link="f222" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b1">
+    <inertial>
+      <origin
+        xyz="-0.0246177214175432 -0.00185109539523642 0.0049550059666431"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118214531865818" />
+      <inertia
+        ixx="1.49297422129762E-06"
+        ixy="-5.22295366915829E-08"
+        ixz="-6.83752432391097E-09"
+        iyy="1.52680921657239E-06"
+        iyz="3.51069506250803E-08"
+        izz="1.03828147386784E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033172 -0.030487 0.0022988"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="b1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b11">
+    <inertial>
+      <origin
+        xyz="-0.0263934021870849 0.0160596957982225 0.00125849053491572"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="1.6641465824602E-06"
+        ixy="-1.49817289461831E-09"
+        ixz="7.96646511760662E-08"
+        iyy="1.85153973126671E-06"
+        iyz="7.14358987969738E-11"
+        izz="3.33109651562095E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b11_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0275 -0.0184 0.009825"
+      rpy="0 0 0" />
+    <parent
+      link="b1" />
+    <child
+      link="b11" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b111">
+    <inertial>
+      <origin
+        xyz="-0.00497825273160135 0.0157028550019689 -0.0121154898133305"
+        rpy="0 0 0" />
+      <mass
+        value="0.013123891605465" />
+      <inertia
+        ixx="4.13150135521813E-06"
+        ixy="7.64559002804643E-09"
+        ixz="-1.02920997669417E-06"
+        iyy="4.23404129801269E-06"
+        iyz="-6.26295608109527E-08"
+        izz="1.07117713853602E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b111.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b111.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b111_joint"
+    type="revolute">
+    <origin
+      xyz="-0.054938 0 0.0026195"
+      rpy="0 0 0" />
+    <parent
+      link="b11" />
+    <child
+      link="b111" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b2">
+    <inertial>
+      <origin
+        xyz="0.0246133393231357 0.00282434722486308 -0.0150410110294942"
+        rpy="0 0 0" />
+      <mass
+        value="0.011831113051677" />
+      <inertia
+        ixx="1.49447992938151E-06"
+        ixy="5.21588505424859E-08"
+        ixz="6.80646972144102E-09"
+        iyy="1.52715873576743E-06"
+        iyz="3.46004410127955E-08"
+        izz="1.03946591481982E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b2_joint"
+    type="revolute">
+    <origin
+      xyz="0.037828 -0.030487 0.022299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="b2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b22">
+    <inertial>
+      <origin
+        xyz="0.0235272856408435 0.0160596957982225 -0.01202756450034"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="2.00730506331622E-06"
+        ixy="1.33548306433477E-09"
+        ixz="6.78687498330479E-07"
+        iyy="1.85153973126671E-06"
+        iyz="-6.8272256054564E-10"
+        izz="2.98793803476492E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b22_joint"
+    type="revolute">
+    <origin
+      xyz="0.0275 -0.0115 -0.010175"
+      rpy="0 0 0" />
+    <parent
+      link="b2" />
+    <child
+      link="b22" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="b222">
+    <inertial>
+      <origin
+        xyz="0.00694005205462229 0.0157028550019689 -0.0111087250112474"
+        rpy="0 0 0" />
+      <mass
+        value="0.013123891605465" />
+      <inertia
+        ixx="3.70498490062773E-06"
+        ixy="2.96862359814366E-09"
+        ixz="1.4773745435462E-06"
+        iyy="4.23404129801268E-06"
+        iyz="-6.30246668572515E-08"
+        izz="1.49769359312641E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b222.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b222.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b222_joint"
+    type="revolute">
+    <origin
+      xyz="0.048972 0 -0.025035"
+      rpy="0 0 0" />
+    <parent
+      link="b22" />
+    <child
+      link="b222" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
