@@ -1,0 +1,34 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # CHANGE THE CONTROLLER NAME AND TYPE HERE
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+# ADD THE CONFIGURATION FOR THE NEW CONTROLLER
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - f1_joint
+      - f11_joint
+      - f111_joint
+      - f2_joint
+      - f22_joint
+      - f222_joint
+      - b1_joint
+      - b11_joint
+      - b111_joint
+      - b2_joint
+      - b22_joint
+      - b222_joint
+    
+    # These interfaces are required by the trajectory controller
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
