@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="spider">
+  name="spider1">
   <link
     name="base_link">
     <inertial>
@@ -24,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/base_link.STL" />
+          filename="package://spider/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -38,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/base_link.STL" />
+          filename="package://spider/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -64,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f1.STL" />
+          filename="package://spider/meshes/f1.STL" />
       </geometry>
       <material
         name="">
@@ -78,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f1.STL" />
+          filename="package://spider/meshes/f1.STL" />
       </geometry>
     </collision>
   </link>
@@ -97,7 +99,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -125,7 +127,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f11.STL" />
+          filename="package://spider/meshes/f11.STL" />
       </geometry>
       <material
         name="">
@@ -139,7 +141,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f11.STL" />
+          filename="package://spider/meshes/f11.STL" />
       </geometry>
     </collision>
   </link>
@@ -158,7 +160,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -186,7 +188,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f111.STL" />
+          filename="package://spider/meshes/f111.STL" />
       </geometry>
       <material
         name="">
@@ -200,7 +202,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f111.STL" />
+          filename="package://spider/meshes/f111.STL" />
       </geometry>
     </collision>
   </link>
@@ -219,7 +221,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -247,7 +249,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f2.STL" />
+          filename="package://spider/meshes/f2.STL" />
       </geometry>
       <material
         name="">
@@ -261,7 +263,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f2.STL" />
+          filename="package://spider/meshes/f2.STL" />
       </geometry>
     </collision>
   </link>
@@ -280,7 +282,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -308,7 +310,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f22.STL" />
+          filename="package://spider/meshes/f22.STL" />
       </geometry>
       <material
         name="">
@@ -322,7 +324,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f22.STL" />
+          filename="package://spider/meshes/f22.STL" />
       </geometry>
     </collision>
   </link>
@@ -341,7 +343,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -369,7 +371,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f222.STL" />
+          filename="package://spider/meshes/f222.STL" />
       </geometry>
       <material
         name="">
@@ -383,7 +385,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/f222.STL" />
+          filename="package://spider/meshes/f222.STL" />
       </geometry>
     </collision>
   </link>
@@ -402,7 +404,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -430,7 +432,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b1.STL" />
+          filename="package://spider/meshes/b1.STL" />
       </geometry>
       <material
         name="">
@@ -444,7 +446,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b1.STL" />
+          filename="package://spider/meshes/b1.STL" />
       </geometry>
     </collision>
   </link>
@@ -463,7 +465,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -491,7 +493,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b11.STL" />
+          filename="package://spider/meshes/b11.STL" />
       </geometry>
       <material
         name="">
@@ -505,7 +507,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b11.STL" />
+          filename="package://spider/meshes/b11.STL" />
       </geometry>
     </collision>
   </link>
@@ -524,7 +526,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -552,7 +554,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b111.STL" />
+          filename="package://spider/meshes/b111.STL" />
       </geometry>
       <material
         name="">
@@ -566,7 +568,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b111.STL" />
+          filename="package://spider/meshes/b111.STL" />
       </geometry>
     </collision>
   </link>
@@ -585,7 +587,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -595,17 +597,17 @@
     name="b2">
     <inertial>
       <origin
-        xyz="0.0205328914940123 -0.0138633991956431 -0.0150410158241582"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="0.0118311153256473" />
+        value="0" />
       <inertia
-        ixx="1.55984155964358E-06"
-        ixy="2.41739733250889E-08"
-        ixz="2.76748761654742E-08"
-        iyy="1.46179794331715E-06"
-        iyz="2.18548886491071E-08"
-        izz="1.0394662011024E-06" />
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
     </inertial>
     <visual>
       <origin
@@ -613,12 +615,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b2.STL" />
+          filename="package://spider/meshes/b2.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -627,7 +629,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b2.STL" />
+          filename="package://spider/meshes/b2.STL" />
       </geometry>
     </collision>
   </link>
@@ -646,7 +648,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -674,7 +676,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b22.STL" />
+          filename="package://spider/meshes/b22.STL" />
       </geometry>
       <material
         name="">
@@ -688,7 +690,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b22.STL" />
+          filename="package://spider/meshes/b22.STL" />
       </geometry>
     </collision>
   </link>
@@ -707,7 +709,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
@@ -735,7 +737,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b222.STL" />
+          filename="package://spider/meshes/b222.STL" />
       </geometry>
       <material
         name="">
@@ -749,7 +751,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find spider)/meshes/b222.STL" />
+          filename="package://spider/meshes/b222.STL" />
       </geometry>
     </collision>
   </link>
@@ -768,353 +770,10 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
+      effort="1"
       velocity="1" />
     <dynamics
       damping="1"
       friction="1" />
   </joint>
-
-
-
-<gazebo>
-  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-    <parameters>$(find spider)/config/spider_controller.yaml</parameters>
-  </plugin>
-</gazebo>
-
-
-
-<transmission name="f1_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f1_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f1_joint"/>
-</transmission>
-
-<transmission name="f11_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f11_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f11_joint"/>
-</transmission>
-
-
-<transmission name="f111_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f111_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f111_joint"/>
-</transmission>
-
-
-<transmission name="f2_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f2_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f2_joint"/>
-</transmission>
-
-<transmission name="f22_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f22_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f22_joint"/>
-</transmission>
-
-<transmission name="f222_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f222_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f222_joint"/>
-</transmission>
-
-
-<transmission name="b1_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b1_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b1_joint"/>
-</transmission>
-
-
-<transmission name="b11_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b11_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b11_joint"/>
-</transmission>
-
-
-<transmission name="b111_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b111_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b111_joint"/>
-</transmission>
-
-<transmission name="b2_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b2_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b2_joint"/>
-</transmission>
-
-
-<transmission name="b22_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b22_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b22_joint"/>
-</transmission>
-
-<transmission name="b222_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b222_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b222_joint"/>
-</transmission>
-
-
-
-
-
-
-
-
-
-<ros2_control name="spider" type="system">
-  <hardware>
-    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </hardware>
-
-  <joint name="f1_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-  <joint name="f11_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-    <joint name="f111_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-    <joint name="f2_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-      <joint name="f22_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-      <joint name="f222_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-      <joint name="b1_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-        <joint name="b11_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-        <joint name="b111_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-        <joint name="b2_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-          <joint name="b22_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-          <joint name="b222_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-  </ros2_control>
-
-<gazebo reference="base_link">
-    <material>Gazebo/Orange</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-
-  <gazebo reference="f1">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f11">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f111">
-    <material>Gazebo/Black</material>
-    <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="f2">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f22">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f222">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="b1">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b11">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b111">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="b2">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b22">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b222">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </robot>

@@ -1,0 +1,202 @@
+<gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <parameters>$(find spider)/config/spider_controller.yaml</parameters>
+  </plugin>
+</gazebo>
+
+
+
+<transmission name="f1_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f1_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f1_joint"/>
+</transmission>
+
+<transmission name="f11_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f11_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f11_joint"/>
+</transmission>
+
+
+<transmission name="f111_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f111_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f111_joint"/>
+</transmission>
+
+
+<transmission name="f2_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f2_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f2_joint"/>
+</transmission>
+
+<transmission name="f22_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f22_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f22_joint"/>
+</transmission>
+
+<transmission name="f222_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f222_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="f222_joint"/>
+</transmission>
+
+
+<transmission name="b1_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b1_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b1_joint"/>
+</transmission>
+
+
+<transmission name="b11_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b11_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b11_joint"/>
+</transmission>
+
+
+<transmission name="b111_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b111_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b111_joint"/>
+</transmission>
+
+<transmission name="b2_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b2_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b2_joint"/>
+</transmission>
+
+
+<transmission name="b22_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b22_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b22_joint"/>
+</transmission>
+
+<transmission name="b222_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b222_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="b222_joint"/>
+</transmission>
+
+
+
+
+
+
+
+
+
+<ros2_control name="spider" type="system">
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+
+  <joint name="f1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+  <joint name="f11_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+    <joint name="f111_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+
+    <joint name="f2_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+      <joint name="f22_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+      <joint name="f222_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+
+      <joint name="b1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+
+        <joint name="b11_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+        <joint name="b111_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+        <joint name="b2_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+          <joint name="b22_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+          <joint name="b222_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+  </ros2_control>
+
+
+

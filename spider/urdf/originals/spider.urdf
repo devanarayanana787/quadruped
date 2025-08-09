@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <robot
   name="spider">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.0023278 0.00485 0.0023771"
+        xyz="0.00232782250844819 0.00484999962416345 0.00237706350870009"
         rpy="0 0 0" />
       <mass
-        value="0.065616" />
+        value="0.0656164141863128" />
       <inertia
-        ixx="4.2481E-05"
-        ixy="-5.904E-14"
-        ixz="-3.5801E-22"
-        iyy="2.1517E-05"
-        iyz="1.9781E-09"
-        izz="5.9904E-05" />
+        ixx="4.24810438500182E-05"
+        ixy="-5.90395550544254E-14"
+        ixz="-4.25608787711575E-22"
+        iyy="2.15170631644458E-05"
+        iyz="1.97807239609372E-09"
+        izz="5.99039456073992E-05" />
     </inertial>
     <visual>
       <origin
@@ -29,7 +28,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -46,17 +45,17 @@
     name="f1">
     <inertial>
       <origin
-        xyz="-0.018401 0.01659 0.003534"
+        xyz="-0.0184005946890866 0.0165895022884504 0.0035339840055419"
         rpy="0 0 0" />
       <mass
-        value="0.011831" />
+        value="0.0118311157008267" />
       <inertia
-        ixx="1.5646E-06"
-        ixy="9.7054E-09"
-        ixz="-3.045E-08"
-        iyy="1.457E-06"
-        iyz="-1.7785E-08"
-        izz="1.0395E-06" />
+        ixx="1.56460943358123E-06"
+        ixy="9.70544099863071E-09"
+        ixz="-3.04504565462108E-08"
+        iyy="1.45703019907951E-06"
+        iyz="-1.77849687358275E-08"
+        izz="1.03946622465339E-06" />
     </inertial>
     <visual>
       <origin
@@ -69,7 +68,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -97,23 +96,30 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f1_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="f11">
     <inertial>
       <origin
-        xyz="-0.00312800502450068 0.029304654512747 0.0109553755380737"
+        xyz="-0.00312800502450067 0.029304654512747 0.0109553755380737"
         rpy="0 0 0" />
       <mass
         value="0.00732061922605988" />
       <inertia
         ixx="1.89519682514823E-06"
-        ixy="-4.81247392753302E-08"
+        ixy="-4.81247392753303E-08"
         ixz="4.17488981091791E-07"
         iyy="1.90454664060193E-06"
         iyz="-4.74204996799255E-07"
@@ -158,17 +164,24 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f11_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f11_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f11_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="f111">
     <inertial>
       <origin
-        xyz="0.00700565537465488 0.0174495821523415 -0.0100072504512934"
+        xyz="0.00700565537465485 0.0174495821523415 -0.0100072504512934"
         rpy="0 0 0" />
       <mass
         value="0.0131238915006959" />
@@ -219,12 +232,19 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f111_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f111_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f111_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="f2">
     <inertial>
@@ -280,17 +300,24 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f2_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="f22">
     <inertial>
       <origin
-        xyz="0.00310211145807297 0.0287358528716765 0.0123772011765127"
+        xyz="0.00310211145807296 0.0287358528716765 0.0123772011765127"
         rpy="0 0 0" />
       <mass
         value="0.00732061922605988" />
@@ -341,27 +368,34 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f22_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f22_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f22_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="f222">
     <inertial>
       <origin
-        xyz="-0.0070653 0.018088 -0.0098563"
+        xyz="-0.0070653086627223 0.0180876566336558 -0.00985630210139571"
         rpy="0 0 0" />
       <mass
-        value="0.013124" />
+        value="0.0131238943756469" />
       <inertia
-        ixx="3.7708E-06"
-        ixy="-5.2231E-07"
-        ixz="1.132E-06"
-        iyy="3.6455E-06"
-        iyz="1.3363E-06"
-        izz="2.0204E-06" />
+        ixx="3.77080615396688E-06"
+        ixy="-5.22308757516632E-07"
+        ixz="1.13196467691098E-06"
+        iyy="3.64549089077327E-06"
+        iyz="1.33629100254609E-06"
+        izz="2.02042319107244E-06" />
     </inertial>
     <visual>
       <origin
@@ -374,7 +408,7 @@
       <material
         name="">
         <color
-          rgba="0.0078431 0.23922 0.82353 1" />
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
       </material>
     </visual>
     <collision>
@@ -402,12 +436,19 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="f222_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f222_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f222_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b1">
     <inertial>
@@ -463,27 +504,34 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="b1_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b11">
     <inertial>
       <origin
-        xyz="-0.028205 -0.0055557 0.011389"
+        xyz="-0.0282050471806676 -0.00555566489074466 0.0113894340388448"
         rpy="0 0 0" />
       <mass
-        value="0.0073206" />
+        value="0.00732061922605988" />
       <inertia
-        ixx="1.9126E-06"
-        ixy="5.9968E-08"
-        ixz="4.5922E-07"
-        iyy="1.9104E-06"
-        iyz="4.6184E-07"
-        izz="3.0238E-06" />
+        ixx="1.91263406433319E-06"
+        ixy="5.99675531475986E-08"
+        ixz="4.59224764523412E-07"
+        iyy="1.91037130512275E-06"
+        iyz="4.61844094527961E-07"
+        izz="3.02377745989192E-06" />
     </inertial>
     <visual>
       <origin
@@ -496,7 +544,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -524,17 +572,24 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="b11_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b11_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b11_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b111">
     <inertial>
       <origin
-        xyz="-0.0171462112923383 0.0050386067181125 -0.00993818888067149"
+        xyz="-0.0171462112923383 0.00503860671811253 -0.00993818888067149"
         rpy="0 0 0" />
       <mass
         value="0.0131238943670332" />
@@ -585,12 +640,19 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="b111_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b111_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b111_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b2">
     <inertial>
@@ -646,27 +708,34 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="b2_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b22">
     <inertial>
       <origin
-        xyz="0.027923 -0.0027666 0.012991"
+        xyz="0.0279227084538793 -0.00276661206470109 0.0129914401376537"
         rpy="0 0 0" />
       <mass
-        value="0.0073206" />
+        value="0.00732061922605988" />
       <inertia
-        ixx="1.9761E-06"
-        ixy="-1.0533E-07"
-        ixz="-5.4409E-07"
-        iyy="1.9406E-06"
-        iyz="4.6686E-07"
-        izz="2.9301E-06" />
+        ixx="1.9760724958718E-06"
+        ixy="-1.05327480772601E-07"
+        ixz="-5.44089524287008E-07"
+        iyy="1.94061004482333E-06"
+        iyz="4.66857847442272E-07"
+        izz="2.93010028865273E-06" />
     </inertial>
     <visual>
       <origin
@@ -679,7 +748,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -707,27 +776,34 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
+      effort="0"
+      velocity="0" />
   </joint>
+  <transmission name="b22_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b22_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b22_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <link
     name="b222">
     <inertial>
       <origin
-        xyz="0.016762 0.0063204 -0.0098613"
+        xyz="0.0167616947192707 0.00632043375217066 -0.00986131093169115"
         rpy="0 0 0" />
       <mass
-        value="0.013124" />
+        value="0.0131238914966797" />
       <inertia
-        ixx="3.6412E-06"
-        ixy="5.2062E-07"
-        ixz="1.2888E-06"
-        iyy="3.7771E-06"
-        iyz="-1.1848E-06"
-        izz="2.0184E-06" />
+        ixx="3.64118227426334E-06"
+        ixy="5.2061739548559E-07"
+        ixz="1.28875192570368E-06"
+        iyy="3.77714643726694E-06"
+        iyz="-1.18480874788312E-06"
+        izz="2.0183909997364E-06" />
     </inertial>
     <visual>
       <origin
@@ -740,7 +816,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -768,353 +844,7 @@
     <limit
       lower="-3.14"
       upper="3.14"
-      effort="5"
-      velocity="1" />
-    <dynamics
-      damping="1"
-      friction="1" />
-  </joint>
-
-
-
-<gazebo>
-  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-    <parameters>$(find spider)/config/spider_controller.yaml</parameters>
-  </plugin>
-</gazebo>
-
-
-
-<transmission name="f1_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f1_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f1_joint"/>
-</transmission>
-
-<transmission name="f11_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f11_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f11_joint"/>
-</transmission>
-
-
-<transmission name="f111_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f111_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f111_joint"/>
-</transmission>
-
-
-<transmission name="f2_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f2_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f2_joint"/>
-</transmission>
-
-<transmission name="f22_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f22_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f22_joint"/>
-</transmission>
-
-<transmission name="f222_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="f222_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="f222_joint"/>
-</transmission>
-
-
-<transmission name="b1_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b1_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b1_joint"/>
-</transmission>
-
-
-<transmission name="b11_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b11_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b11_joint"/>
-</transmission>
-
-
-<transmission name="b111_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b111_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b111_joint"/>
-</transmission>
-
-<transmission name="b2_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b2_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b2_joint"/>
-</transmission>
-
-
-<transmission name="b22_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b22_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b22_joint"/>
-</transmission>
-
-<transmission name="b222_joint_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <actuator name="b222_joint_motor">
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-  <joint name="b222_joint"/>
-</transmission>
-
-
-
-
-
-
-
-
-
-<ros2_control name="spider" type="system">
-  <hardware>
-    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </hardware>
-
-  <joint name="f1_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-  <joint name="f11_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-    <joint name="f111_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-    <joint name="f2_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-      <joint name="f22_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-      <joint name="f222_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-      <joint name="b1_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-
-        <joint name="b11_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-        <joint name="b111_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-        <joint name="b2_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-          <joint name="b22_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-          <joint name="b222_joint">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-  </joint>
-
-  </ros2_control>
-
-<gazebo reference="base_link">
-    <material>Gazebo/Orange</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-
-  <gazebo reference="f1">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f11">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f111">
-    <material>Gazebo/Black</material>
-    <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="f2">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f22">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="f222">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="b1">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b11">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b111">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-  <gazebo reference="b2">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b22">
-    <material>Gazebo/Gray</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
-  </gazebo>
-  <gazebo reference="b222">
-    <material>Gazebo/Black</material>
-      <surface>
-    <friction>
-      <ode>
-        <mu>2.0</mu>
-        <mu2>2.0</mu2>
-      </ode>
-    </friction>
-    <contact>
-      <ode>
-        <kp>1000000.0</kp>
-        <kd>100.0</kd>
-        <min_depth>0.001</min_depth>
-        <max_vel>1.0</max_vel>
-      </ode>
-    </contact>
-  </surface>
-  </gazebo>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      effort="0"
+      velocity="0" />
+  </joint>  
 </robot>

@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="spider">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00232782250844819 0.00484999962416345 0.00237706350870009"
+        rpy="0 0 0" />
+      <mass
+        value="0.0656164141863128" />
+      <inertia
+        ixx="4.24810438500182E-05"
+        ixy="-5.90395550544254E-14"
+        ixz="-4.25608787711575E-22"
+        iyy="2.15170631644458E-05"
+        iyz="1.97807239609372E-09"
+        izz="5.99039456073992E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="f1">
+    <inertial>
+      <origin
+        xyz="-0.0184005946890866 0.0165895022884504 0.0035339840055419"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118311157008267" />
+      <inertia
+        ixx="1.56460943358123E-06"
+        ixy="9.70544099863071E-09"
+        ixz="-3.04504565462108E-08"
+        iyy="1.45703019907951E-06"
+        iyz="-1.77849687358275E-08"
+        izz="1.03946622465339E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033172 0.040513 0.0037238"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f1_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="f11">
+    <inertial>
+      <origin
+        xyz="-0.00312800502450067 0.029304654512747 0.0109553755380737"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="1.89519682514823E-06"
+        ixy="-4.81247392753303E-08"
+        ixz="4.17488981091791E-07"
+        iyy="1.90454664060193E-06"
+        iyz="-4.74204996799255E-07"
+        izz="3.0470393635977E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f11_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03439 0.0063335 0.0084"
+      rpy="0 0 0" />
+    <parent
+      link="f1" />
+    <child
+      link="f11" />
+    <axis
+      xyz="-0.74991 -0.66153 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f11_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f11_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f11_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="f111">
+    <inertial>
+      <origin
+        xyz="0.00700565537465485 0.0174495821523415 -0.0100072504512934"
+        rpy="0 0 0" />
+      <mass
+        value="0.0131238915006959" />
+      <inertia
+        ixx="3.81248468902086E-06"
+        ixy="4.89789117554809E-07"
+        ixz="-1.09704738692261E-06"
+        iyy="3.66531231134112E-06"
+        iyz="1.33727196442167E-06"
+        izz="1.95892271569825E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f111.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f111.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f111_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03266 0.03793 0.022803"
+      rpy="0 0 0" />
+    <parent
+      link="f11" />
+    <child
+      link="f111" />
+    <axis
+      xyz="0.74991 0.66153 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f111_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f111_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f111_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="f2">
+    <inertial>
+      <origin
+        xyz="0.0151948529255643 0.0194570105580934 -0.0150449894403129"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118214556601813" />
+      <inertia
+        ixx="1.56348678645003E-06"
+        ixy="-1.19050069760458E-08"
+        ixz="3.0571500046444E-08"
+        iyy="1.45629734097349E-06"
+        iyz="-1.85639441950684E-08"
+        izz="1.03828177179975E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f2_joint"
+    type="revolute">
+    <origin
+      xyz="0.037828 0.040513 0.022299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f2_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="f22">
+    <inertial>
+      <origin
+        xyz="0.00310211145807296 0.0287358528716765 0.0123772011765127"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="1.93264517468614E-06"
+        ixy="8.78459053149969E-08"
+        ixz="-4.65779598189396E-07"
+        iyy="1.94666462959028E-06"
+        iyz="-5.1314367047501E-07"
+        izz="2.96747302507144E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f22_joint"
+    type="revolute">
+    <origin
+      xyz="0.029378 0.010453 -0.010175"
+      rpy="0 0 0" />
+    <parent
+      link="f2" />
+    <child
+      link="f22" />
+    <axis
+      xyz="0.73977 -0.67286 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f22_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f22_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f22_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="f222">
+    <inertial>
+      <origin
+        xyz="-0.0070653086627223 0.0180876566336558 -0.00985630210139571"
+        rpy="0 0 0" />
+      <mass
+        value="0.0131238943756469" />
+      <inertia
+        ixx="3.77080615396688E-06"
+        ixy="-5.22308757516632E-07"
+        ixz="1.13196467691098E-06"
+        iyy="3.64549089077327E-06"
+        iyz="1.33629100254609E-06"
+        izz="2.02042319107244E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f222.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/f222.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f222_joint"
+    type="revolute">
+    <origin
+      xyz="0.032696 0.035948 0.025763"
+      rpy="0 0 0" />
+    <parent
+      link="f22" />
+    <child
+      link="f222" />
+    <axis
+      xyz="0.73977 -0.67286 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="f222_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f222_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="f222_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b1">
+    <inertial>
+      <origin
+        xyz="-0.0160637632179106 -0.018746048290921 0.00495501051265646"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118214555384042" />
+      <inertia
+        ixx="1.56218378004245E-06"
+        ixy="-1.67241701079202E-08"
+        ixz="-2.9695871646277E-08"
+        iyy="1.45760030760269E-06"
+        iyz="1.99346925009862E-08"
+        izz="1.03828176417558E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033172 -0.030487 0.0022988"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="b1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="b1_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b11">
+    <inertial>
+      <origin
+        xyz="-0.0282050471806676 -0.00555566489074466 0.0113894340388448"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="1.91263406433319E-06"
+        ixy="5.99675531475986E-08"
+        ixz="4.59224764523412E-07"
+        iyy="1.91037130512275E-06"
+        iyz="4.61844094527961E-07"
+        izz="3.02377745989192E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b11_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0063746 -0.032468 0.009825"
+      rpy="0 0 0" />
+    <parent
+      link="b1" />
+    <child
+      link="b11" />
+    <axis
+      xyz="-0.70841 0.7058 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="b11_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b11_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b11_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b111">
+    <inertial>
+      <origin
+        xyz="-0.0171462112923383 0.00503860671811253 -0.00993818888067149"
+        rpy="0 0 0" />
+      <mass
+        value="0.0131238943670332" />
+      <inertia
+        ixx="3.73910124940875E-06"
+        ixy="-5.09192749678692E-07"
+        ixz="-1.18341224274172E-06"
+        iyy="3.71049698439754E-06"
+        iyz="-1.27544845268077E-06"
+        izz="1.98712199995714E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b111.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b111.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b111_joint"
+    type="revolute">
+    <origin
+      xyz="-0.035028 -0.035157 0.023707"
+      rpy="0 0 0" />
+    <parent
+      link="b11" />
+    <child
+      link="b111" />
+    <axis
+      xyz="-0.70841 0.7058 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="b111_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b111_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b111_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b2">
+    <inertial>
+      <origin
+        xyz="0.0205328914940123 -0.0138633991956431 -0.0150410158241582"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118311153256473" />
+      <inertia
+        ixx="1.55984155964358E-06"
+        ixy="2.41739733250889E-08"
+        ixz="2.76748761654742E-08"
+        iyy="1.46179794331715E-06"
+        iyz="2.18548886491071E-08"
+        izz="1.0394662011024E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b2_joint"
+    type="revolute">
+    <origin
+      xyz="0.037828 -0.030487 0.022299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="b2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="b2_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b22">
+    <inertial>
+      <origin
+        xyz="0.0279227084538793 -0.00276661206470109 0.0129914401376537"
+        rpy="0 0 0" />
+      <mass
+        value="0.00732061922605988" />
+      <inertia
+        ixx="1.9760724958718E-06"
+        ixy="-1.05327480772601E-07"
+        ixz="-5.44089524287008E-07"
+        iyy="1.94061004482333E-06"
+        iyz="4.66857847442272E-07"
+        izz="2.93010028865273E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b22_joint"
+    type="revolute">
+    <origin
+      xyz="0.013409 -0.026621 -0.010175"
+      rpy="0 0 0" />
+    <parent
+      link="b2" />
+    <child
+      link="b22" />
+    <axis
+      xyz="0.65041 0.75958 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <transmission name="b22_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="b22_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="b22_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <link
+    name="b222">
+    <inertial>
+      <origin
+        xyz="0.0167616947192707 0.00632043375217066 -0.00986131093169115"
+        rpy="0 0 0" />
+      <mass
+        value="0.0131238914966797" />
+      <inertia
+        ixx="3.64118227426334E-06"
+        ixy="5.2061739548559E-07"
+        ixz="1.28875192570368E-06"
+        iyy="3.77714643726694E-06"
+        iyz="-1.18480874788312E-06"
+        izz="2.0183909997364E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b222.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find spider)/meshes/b222.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b222_joint"
+    type="revolute">
+    <origin
+      xyz="0.036379 -0.03115 0.027042"
+      rpy="0 0 0" />
+    <parent
+      link="b22" />
+    <child
+      link="b222" />
+    <axis
+      xyz="0.65041 0.75958 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>  
+
+<!-- transmission for f1_joint -->
+<transmission name="f1_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f1_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f1_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for f11_joint -->
+<transmission name="f11_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f11_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f11_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for f111_joint -->
+<transmission name="f111_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f111_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f111_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for f2_joint -->
+<transmission name="f2_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f2_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f2_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for f22_joint -->
+<transmission name="f22_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f22_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f22_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for f222_joint -->
+<transmission name="f222_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="f222_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="f222_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b1_joint -->
+<transmission name="b1_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b1_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b1_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b11_joint -->
+<transmission name="b11_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b11_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b11_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b111_joint -->
+<transmission name="b111_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b111_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b111_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b2_joint -->
+<transmission name="b2_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b2_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b2_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b22_joint -->
+<transmission name="b22_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b22_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b22_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- transmission for b222_joint -->
+<transmission name="b222_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="b222_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </actuator>
+  <joint name="b222_joint">
+    <hardwareInterface>hardware_interface/PositionCommandInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+
+<!-- Gazebo ROS2 control plugin -->
+<gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <robot_sim_type>gazebo_ros2_control/DefaultRobotHWSim</robot_sim_type>
+  </plugin>
+</gazebo>
+
+</robot>
